@@ -23,7 +23,7 @@ php artisan vendor:publish --tag="statamic-glossary-tooltips"
 First you have to create a collection for the glossary terms with the handle `glossary`.
 Two fields are required in the blueprint of the Collection entries: 
 1. Name of the term as `title`.
-2. The Term definition as `definition`.
+2. The term definition as `definition`.
 
 ### 2. Step: Enable REST API of Statamic
 

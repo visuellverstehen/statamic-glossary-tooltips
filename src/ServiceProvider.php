@@ -20,11 +20,11 @@ class ServiceProvider extends AddonServiceProvider
 
         $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang', 'en');
 
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('glossaryTooltips.php'),
-            ], 'glossaryTooltips');
-        }
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'glossaryTooltips');
+
+        $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('glossaryTooltips.php'),
+        ], 'glossaryTooltips');
 
         Statamic::afterInstalled(function ($command) {
             $command->call('vendor:publish', ['--tag' => 'statamic-glossary-tooltips']);

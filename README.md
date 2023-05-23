@@ -10,12 +10,6 @@ Run the following command from your project root:
 composer require visuellverstehen/statamic-glossary-tooltips
 ```
 
-and run the following command to create needed js file in your `public/vendor` folder:
-
-```bash
-php artisan vendor:publish --tag="statamic-glossary-tooltips"
-```
-
 ## How to set up
 
 ### 1. Step: Create Collection + Blueprint for glossary terms

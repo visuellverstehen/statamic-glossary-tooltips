@@ -1,10 +1,10 @@
 <?php
 
-namespace VV\StatamicGlossaryTooltips;
+namespace VV\GlossaryTooltips;
 
 use Statamic\Fieldtypes\Bard\Augmentor;
 use Statamic\Providers\AddonServiceProvider;
-use VV\StatamicGlossaryTooltips\GlossaryTooltips;
+use VV\GlossaryTooltips\GlossaryTooltips;
 use Statamic\Statamic;
 
 class ServiceProvider extends AddonServiceProvider
@@ -21,16 +21,16 @@ class ServiceProvider extends AddonServiceProvider
 
         $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang', 'en');
 
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'glossaryTooltips');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'glossary-tooltips');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('glossaryTooltips.php'),
-            ], 'statamic-glossary-tooltips');
+                __DIR__.'/../config/config.php' => config_path('glossary-tooltips.php'),
+            ], 'glossary-tooltips');
         }
 
         Statamic::afterInstalled(function ($command) {
-            $command->call('vendor:publish', ['--tag' => 'statamic-glossary-tooltips']);
+            $command->call('vendor:publish', ['--tag' => 'glossary-tooltips']);
         });
     }
 }

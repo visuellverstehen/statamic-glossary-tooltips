@@ -1,6 +1,6 @@
 <?php
 
-namespace VV\StatamicGlossaryTooltips;
+namespace VV\GlossaryTooltips;
 
 use Tiptap\Core\Mark;
 use Tiptap\Utils\HTML;

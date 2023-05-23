@@ -1,6 +1,6 @@
 <?php
 
-namespace Visuellverstehen\StatamicGlossaryTooltips;
+namespace VV\StatamicGlossaryTooltips;
 
 use Statamic\Fieldtypes\Bard\Augmentor;
 use Statamic\Providers\AddonServiceProvider;

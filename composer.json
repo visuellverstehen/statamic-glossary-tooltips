@@ -1,19 +1,41 @@
 {
-  "name": "visuellverstehen/statamic-glossary-tooltips",
-  "autoload": {
-      "psr-4": {
-          "Visuellverstehen\\StatamicGlossaryTooltips\\": "src"
-      }
-  },
-  "extra": {
-      "statamic": {
-          "name": "Statamic Glossary Tooltips",
-          "description": "Statamic Glossary Tooltips addon"
-      },
-      "laravel": {
-          "providers": [
-              "Visuellverstehen\\StatamicGlossaryTooltips\\ServiceProvider"
-          ]
-      }
-  }
+    "name": "visuellverstehen/statamic-glossary-tooltips",
+    "description": "Provides glossary tooltips for your bard content.",
+    "keywords": [
+        "statamic",
+        "addon",
+        "tooltips",
+        "glossary",
+        "terms",
+        "bard",
+        "v4"
+    ],
+    "type": "statamic-addon",
+    "autoload": {
+        "psr-4": {
+            "VV\\StatamicGlossaryTooltips\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "visuellverstehen"
+        }
+    ],
+    "support": {
+        "email": "hello@visuellverstehen.de"
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Glossary Tooltips",
+            "description": "Statamic Glossary Tooltips addon"
+        },
+        "laravel": {
+            "providers": [
+                "VV\\StatamicGlossaryTooltips\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "statamic/cms": "^3.4 || ^4.0"
+    }
 }

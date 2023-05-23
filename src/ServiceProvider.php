@@ -14,6 +14,13 @@ class ServiceProvider extends AddonServiceProvider
     public function boot()
     {
         parent::boot();
+        
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/config.php' => config_path('glossaryTooltips.php'),
+            ], 'glossaryTooltips');
+        }
+
         Augmentor::addExtension('glossaryTooltips', new GlossaryTooltips());
 
         $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang', 'en');

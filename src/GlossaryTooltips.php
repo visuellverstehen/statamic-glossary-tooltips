@@ -13,7 +13,7 @@ class GlossaryTooltips extends Mark
     public function addOptions()
     {
         return [
-            'HTMLAttributes' => config('glossary-tooltips.html_attributes')
+            'HTMLAttributes' => config('glossaryTooltips.html_attributes')
         ];
     }
 

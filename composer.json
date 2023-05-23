@@ -1,0 +1,19 @@
+{
+  "name": "visuellverstehen/statamic-glossary-tooltips",
+  "autoload": {
+      "psr-4": {
+          "Visuellverstehen\\StatamicGlossaryTooltips\\": "src"
+      }
+  },
+  "extra": {
+      "statamic": {
+          "name": "Statamic Glossary Tooltips",
+          "description": "Statamic Glossary Tooltips addon"
+      },
+      "laravel": {
+          "providers": [
+              "Visuellverstehen\\StatamicGlossaryTooltips\\ServiceProvider"
+          ]
+      }
+  }
+}

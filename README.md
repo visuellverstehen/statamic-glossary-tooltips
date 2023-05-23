@@ -46,7 +46,7 @@ and enable collections in the resources in your `config/statamic/api.php` file:
 ]
 ```
 
-See the ([Statamic documentation](https://statamic.dev/rest-api#enable-the-api)) for more information about the REST API
+See the [Statamic documentation](https://statamic.dev/rest-api#enable-the-api) for more information about the REST API
 
 ### 3. Step: Add tooltips to your bard
 
@@ -80,7 +80,7 @@ If you want to add other attributes to the `<dfn>` tag or change the CSS class, 
 
 ### Add tooltip
 
-How you want to design and implement the actual tooltip is up to you. Without any further configurations, you can create a tooltip with Vanilla JavaScript. But if you prefer to use ([alpine.js](https://alpinejs.dev/)), you can set your Alpine component details in the config file ([see below](#configuration)).
+How you want to design and implement the actual tooltip is up to you. Without any further configurations, you can create a tooltip with Vanilla JavaScript. But if you prefer to use [alpine.js](https://alpinejs.dev/), you can set your Alpine component details in the config file ([see below](#configuration)).
 
 ## Configuration
 

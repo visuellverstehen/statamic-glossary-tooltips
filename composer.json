@@ -37,5 +37,10 @@
     },
     "require": {
         "statamic/cms": "^3.4 || ^4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": false
+        }
     }
 }

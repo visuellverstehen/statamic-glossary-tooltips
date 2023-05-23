@@ -46,6 +46,8 @@ and enable collections in the resources in your `config/statamic/api.php` file:
 ]
 ```
 
+See the ([Statamic documentation](https://statamic.dev/rest-api#enable-the-api)) for more information about the REST API
+
 ### 3. Step: Add tooltips to your bard
 
 In order to be able to create glossary tooltips, you need to enable it in the blueprint of your bard editor.
@@ -56,13 +58,33 @@ Go to your bard editor and select the words you want to mark. Click on the speec
 
 In the output of the Bard editor the selected words are now marked as `<dfn>`. 
 
-This is an example output:
+This is a sample output with a selected entry from the glossary collection:
 
 ```bash
-<dfn class="glossary-tooltip-button" x-data="glossaryTooltip()" type="entry" locale="en" title="an imaginary reptile said to be able to kill by poison or by looking at someone: The herb rue was said to offer protection from basilisks." value="Basilisk" id="b7d272ea-e4b2-4543-895e-6485123bb7ab">
+<dfn class="glossary-tooltip" type="entry" locale="en" title="an imaginary reptile said to be able to kill by poison or by looking at someone: The herb rue was said to offer protection from basilisks." value="Basilisk" id="b7d272ea-e4b2-4543-895e-6485123bb7ab">
     Basilisk
 </dfn>
 ```
+
+This is a sample output with a custom definition:
+
+```bash
+<dfn class="glossary-tooltip" type="custom" locale="en" title="an imaginary reptile said to be able to kill by poison or by looking at someone: The herb rue was said to offer protection from basilisks." value="Basilisk" id="b7d272ea-e4b2-4543-895e-6485123bb7ab">
+    Basilisk
+</dfn>
+```
+
+### Custom HTML attributes
+
+If you want to add other attributes to the `<dfn>` tag or change the CSS class, you can do so in the config file ([see below](#configuration)).
+
+### Add tooltip
+
+How you want to design and implement the actual tooltip is up to you. Without any further configurations, you can create a tooltip with Vanilla JavaScript. But if you prefer to use ([alpine.js](https://alpinejs.dev/)), you can set your Alpine component details in the config file ([see below](#configuration)).
+
+## Configuration
+
+The addon provides configuration options through it's `config/glossaryTooltip.php` file. Check out the description in there. All settings have sensible default options, so in the best-cast-scenario you don't have to configure anything.
 
 ## More about us
 

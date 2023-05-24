@@ -9,11 +9,7 @@ class GlossaryTooltips extends Mark
 {
     public static $name = 'glossaryTooltips';  // Name in markdown file
 
-    /**
-     * Set non-dynamic values
-     * 
-     * @return array
-     */
+    // Set non-dynamic values
     public function addOptions(): array
     {
         return [
@@ -21,11 +17,7 @@ class GlossaryTooltips extends Mark
         ];
     }
 
-    /**
-     * Save emitted parameters out of Vue component
-     * 
-     * @return array
-     */
+    // Save emitted parameters out of Vue component
     public function addAttributes(): array
     {
         return [
@@ -37,15 +29,8 @@ class GlossaryTooltips extends Mark
         ];
     }
 
-    /**
-     * Defines how the selected text should be marked up in the frontend
-     * 
-     * @param $mark
-     * @param array $HTMLAttributes
-     * 
-     * @return array
-     */
-    public function renderHTML($mark, $HTMLAttributes = []): array
+    // Defines how the selected text should be marked up in the frontend
+    public function renderHTML($mark, ?array $HTMLAttributes = []): array
     {
         return [
             'dfn',

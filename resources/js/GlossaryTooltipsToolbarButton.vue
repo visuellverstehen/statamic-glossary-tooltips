@@ -3,7 +3,7 @@
         <template #trigger>
             <button
                 class="bard-toolbar-button"
-                :class="{ active }"
+                :class="{ active: typeIsSet }"
                 v-tooltip="button.text"
                 :aria-label="button.text"
                 @click="toggleGlossaryToolbar"
@@ -42,6 +42,12 @@
                 glossaryAttrs: null,
                 showingToolbar: false,
             }
+        },
+
+        computed: {
+            typeIsSet() {
+                return this.editor.getAttributes('glossaryTooltips').type ? true : false;
+            },
         },
 
         methods: {

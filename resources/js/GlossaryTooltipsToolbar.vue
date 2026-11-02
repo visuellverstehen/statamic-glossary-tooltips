@@ -127,7 +127,7 @@ export default {
 
         // Get all entries in glossary collection
         try {
-            const res = await fetch('/api/collections/glossary/entries');
+            const res = await fetch(`${Statamic.$config.get('cpUrl')}/glossary-tooltips/entries`);
             const { data } = await res.json();
             this.glossaryEntries = data;
         } catch (e) {

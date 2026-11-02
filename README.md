@@ -19,32 +19,9 @@ Two fields are required in the blueprint of the Collection entries:
 1. Name of the term as `title`.
 2. The term definition as `definition`.
 
-### 2. Step: Enable REST API of Statamic
+### 2. Step: Add tooltips to your bard
 
-The created entries are pulled into the Vue component of the Bard addon using Statamic's REST API. 
-
-To enable the REST API, add the following to your `.env` file:
-
-```bash
-STATAMIC_API_ENABLED=true
-```
-
-and enable collections in the resources in your `config/statamic/api.php` file:
-
-```bash
-'resources' => [
-    'collections' => [
-        'glossary' => true,
-    ],
-    // etc.
-]
-```
-
-See the [Statamic documentation](https://statamic.dev/rest-api#enable-the-api) for more information about the REST API
-
-### 3. Step: Add tooltips to your bard
-
-In order to be able to create glossary tooltips, you need to enable it in the blueprint of your bard editor.
+In order to be able to create glossary tooltips, you need to enable it in the blueprint of your bard.
 
 ## How to use
 

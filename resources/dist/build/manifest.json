@@ -1,0 +1,8 @@
+{
+  "resources/js/bard.js": {
+    "file": "assets/bard-CLrJTOho.js",
+    "name": "bard",
+    "src": "resources/js/bard.js",
+    "isEntry": true
+  }
+}

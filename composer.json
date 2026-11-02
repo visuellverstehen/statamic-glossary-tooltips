@@ -8,7 +8,7 @@
         "glossary",
         "terms",
         "bard",
-        "v4"
+        "v6"
     ],
     "type": "statamic-addon",
     "autoload": {
@@ -36,7 +36,7 @@
         }
     },
     "require": {
-        "statamic/cms": "^4.0 | ^5.0"
+        "statamic/cms": "^6.0"
     },
     "config": {
         "allow-plugins": {

@@ -4,7 +4,7 @@ A Statamic addon that provides the possibility to add tooltips to your bard cont
 
 # How to Install
 
-Run the following command from your project root:
+This addon requires Statamic 6. Run the following command from your project root:
 
 ```bash
 composer require visuellverstehen/statamic-glossary-tooltips
@@ -78,7 +78,17 @@ How you want to design and implement the actual tooltip is up to you. Without an
 
 ## Configuration
 
-The addon provides configuration options through it's `config/glossaryTooltip.php` file. Check out the description in there. All settings have sensible default options, so in the best-cast-scenario you don't have to configure anything.
+The addon provides configuration options through it's `config/glossary-tooltips.php` file. Check out the description in there. All settings have sensible default options, so in the best-cast-scenario you don't have to configure anything.
+
+## Development
+
+The Control Panel assets are built with Vite and committed to `resources/dist`. The build needs the addon's Composer dependencies installed (for `@statamic/cms`) and a symlink to the compiled assets:
+
+```bash
+npm install
+npm run build
+ln -s $PWD/resources/dist public/vendor/statamic-glossary-tooltips
+```
 
 ## More about us
 

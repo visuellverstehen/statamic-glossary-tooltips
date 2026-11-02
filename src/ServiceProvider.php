@@ -4,22 +4,22 @@ namespace VV\GlossaryTooltips;
 
 use Statamic\Fieldtypes\Bard\Augmentor;
 use Statamic\Providers\AddonServiceProvider;
-use VV\GlossaryTooltips\GlossaryTooltips;
 use Statamic\Statamic;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $scripts = [
-        __DIR__ . '/../dist/js/glossary-tooltips.js',
+    protected $vite = [
+        'input' => [
+            'resources/js/bard.js',
+        ],
+        'publicDirectory' => 'resources/dist',
     ];
 
-    public function boot()
+    public function bootAddon()
     {
-        parent::boot();
-
         Augmentor::addExtension('glossaryTooltips', new GlossaryTooltips());
 
-        $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang', 'en');
+        $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang');
 
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'glossary-tooltips');
 

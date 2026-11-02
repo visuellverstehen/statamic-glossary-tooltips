@@ -16,6 +16,11 @@
             "VV\\GlossaryTooltips\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "VV\\GlossaryTooltips\\Tests\\": "tests"
+        }
+    },
     "authors": [
         {
             "name": "visuellverstehen"
@@ -40,7 +45,13 @@
     },
     "config": {
         "allow-plugins": {
-            "pixelfear/composer-dist-plugin": false
+            "pixelfear/composer-dist-plugin": false,
+            "pestphp/pest-plugin": true
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.8",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
     }
 }

@@ -135,6 +135,17 @@ export default {
         }
     },
 
+    watch: {
+        // The locales are only known once the entries are loaded
+        glossaryEntries(entries) {
+            if (!entries.length || !this.glossaryAttrs?.locale) return;
+
+            if (this.locales.some((locale) => locale.value === this.glossaryAttrs.locale)) {
+                this.activeLocale = this.glossaryAttrs.locale;
+            }
+        },
+    },
+
     methods: {
         // Method is called if selected words already contain a defintion
         mountCurrentValues() {
@@ -143,7 +154,6 @@ export default {
             this.activeType = this.glossaryAttrs.type;
 
             if (this.activeType === 'entry') {
-                this.activeLocale = this.glossaryAttrs.locale ?? 'all';
                 this.selectedId = this.glossaryAttrs.id ?? null;
             } else {
                 this.customTitle = this.glossaryAttrs.title;

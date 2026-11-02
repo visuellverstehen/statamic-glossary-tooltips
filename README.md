@@ -67,6 +67,13 @@ npm run build
 ln -s $PWD/resources/dist public/vendor/statamic-glossary-tooltips
 ```
 
+Run the tests with:
+
+```bash
+composer install
+vendor/bin/pest
+```
+
 ## More about us
 
 - [www.visuellverstehen.de](https://visuellverstehen.de)

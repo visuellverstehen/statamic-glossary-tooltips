@@ -9,14 +9,6 @@ class GlossaryTooltips extends Mark
 {
     public static $name = 'glossaryTooltips';
 
-    // Set non-dynamic values
-    public function addOptions(): array
-    {
-        return [
-            'HTMLAttributes' => config('glossary-tooltips.html_attributes')
-        ];
-    }
-
     // Save emitted parameters out of Vue component
     public function addAttributes(): array
     {
@@ -34,7 +26,7 @@ class GlossaryTooltips extends Mark
     {
         return [
             'dfn',
-            HTML::mergeAttributes($this->options['HTMLAttributes'], $HTMLAttributes),
+            HTML::mergeAttributes(config('glossary-tooltips.html_attributes'), $HTMLAttributes),
         ];
     }
 }

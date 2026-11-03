@@ -4,7 +4,7 @@ A Statamic addon that provides the possibility to add tooltips to your bard cont
 
 # How to Install
 
-Run the following command from your project root:
+This addon requires Statamic 6. Run the following command from your project root:
 
 ```bash
 composer require visuellverstehen/statamic-glossary-tooltips
@@ -19,32 +19,9 @@ Two fields are required in the blueprint of the Collection entries:
 1. Name of the term as `title`.
 2. The term definition as `definition`.
 
-### 2. Step: Enable REST API of Statamic
+### 2. Step: Add tooltips to your bard
 
-The created entries are pulled into the Vue component of the Bard addon using Statamic's REST API. 
-
-To enable the REST API, add the following to your `.env` file:
-
-```bash
-STATAMIC_API_ENABLED=true
-```
-
-and enable collections in the resources in your `config/statamic/api.php` file:
-
-```bash
-'resources' => [
-    'collections' => [
-        'glossary' => true,
-    ],
-    // etc.
-]
-```
-
-See the [Statamic documentation](https://statamic.dev/rest-api#enable-the-api) for more information about the REST API
-
-### 3. Step: Add tooltips to your bard
-
-In order to be able to create glossary tooltips, you need to enable it in the blueprint of your bard editor.
+In order to be able to create glossary tooltips, you need to enable it in the blueprint of your bard.
 
 ## How to use
 
@@ -78,7 +55,24 @@ How you want to design and implement the actual tooltip is up to you. Without an
 
 ## Configuration
 
-The addon provides configuration options through it's `config/glossaryTooltip.php` file. Check out the description in there. All settings have sensible default options, so in the best-cast-scenario you don't have to configure anything.
+The addon provides configuration options through it's `config/glossary-tooltips.php` file. Check out the description in there. All settings have sensible default options, so in the best-cast-scenario you don't have to configure anything.
+
+## Development
+
+The Control Panel assets are built with Vite and committed to `resources/dist`. The build needs the addon's Composer dependencies installed (for `@statamic/cms`) and a symlink to the compiled assets:
+
+```bash
+npm install
+npm run build
+ln -s $PWD/resources/dist public/vendor/statamic-glossary-tooltips
+```
+
+Run the tests with:
+
+```bash
+composer install
+vendor/bin/pest
+```
 
 ## More about us
 

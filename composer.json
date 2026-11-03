@@ -8,12 +8,17 @@
         "glossary",
         "terms",
         "bard",
-        "v4"
+        "v6"
     ],
     "type": "statamic-addon",
     "autoload": {
         "psr-4": {
             "VV\\GlossaryTooltips\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VV\\GlossaryTooltips\\Tests\\": "tests"
         }
     },
     "authors": [
@@ -36,11 +41,17 @@
         }
     },
     "require": {
-        "statamic/cms": "^4.0 | ^5.0"
+        "statamic/cms": "^6.0"
     },
     "config": {
         "allow-plugins": {
-            "pixelfear/composer-dist-plugin": false
+            "pixelfear/composer-dist-plugin": false,
+            "pestphp/pest-plugin": true
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.8",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
     }
 }

@@ -11,6 +11,7 @@
         "v6"
     ],
     "type": "statamic-addon",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "VV\\GlossaryTooltips\\": "src"
@@ -38,6 +39,9 @@
             "providers": [
                 "VV\\GlossaryTooltips\\ServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-main": "2.x-dev"
         }
     },
     "require": {
